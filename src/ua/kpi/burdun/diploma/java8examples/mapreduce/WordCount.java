@@ -2,6 +2,7 @@ package ua.kpi.burdun.diploma.java8examples.mapreduce;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
@@ -16,10 +17,17 @@ import static java.util.stream.Collectors.groupingByConcurrent;
  */
 public class WordCount {
 
-    public static void testSequentially() throws IOException {
+    private final Path inputPath;
+
+    public WordCount(String inputPath) {
+        this.inputPath = Paths.get(inputPath);
+    }
+
+
+    public void testSequentially() throws IOException {
         System.out.println("testSequentially:");
 
-        Stream<String> lines = Files.lines(Paths.get("pg42671.txt"));
+        Stream<String> lines = Files.lines(inputPath);
         long start = System.currentTimeMillis();
 
         Map<Object, Long> words = lines
@@ -35,10 +43,10 @@ public class WordCount {
     }
 
 
-    public static void testParallel() throws IOException {
+    public void testParallel() throws IOException {
         System.out.println("testParallel:");
 
-        Stream<String> lines = Files.lines(Paths.get("pg42671.txt"));
+        Stream<String> lines = Files.lines(inputPath);
         long start = System.currentTimeMillis();
 
         Map<Object, Long> words = lines.parallel()
@@ -55,8 +63,9 @@ public class WordCount {
 
 
     public static void main(String[] args) throws IOException {
-        testSequentially();
-        testParallel();
+        WordCount wordCount = new WordCount("input.txt");
+        wordCount.testSequentially();
+        wordCount.testParallel();
     }
 
 }
