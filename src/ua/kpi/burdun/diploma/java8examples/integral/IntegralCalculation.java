@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.integral;
+package ua.kpi.burdun.diploma.java8examples.integral;
 
 import java.util.function.DoubleUnaryOperator;
 import java.util.function.Function;

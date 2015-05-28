@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.primenumbers.squares;
+package ua.kpi.burdun.diploma.java8examples.primenumbers.squares;
 
 import java.util.stream.IntStream;
 

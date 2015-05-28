@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.primenumbers;
+package ua.kpi.burdun.diploma.java8examples.primenumbers;
 
 import java.util.Arrays;
 import java.util.List;

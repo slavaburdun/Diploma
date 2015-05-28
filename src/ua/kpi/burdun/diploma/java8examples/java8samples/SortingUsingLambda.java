@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.java8samples;
+package ua.kpi.burdun.diploma.java8examples.java8samples;
 
 import java.util.Arrays;
 import java.util.Comparator;

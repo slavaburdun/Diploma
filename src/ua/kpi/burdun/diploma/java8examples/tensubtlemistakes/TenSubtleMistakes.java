@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.tensubtlemistakes;
+package ua.kpi.burdun.diploma.java8examples.tensubtlemistakes;
 
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package ua.kpi.burdun.diploma.examples.java8samples;
+package ua.kpi.burdun.diploma.java8examples.java8samples;
 
 /**
  * Created by burdun on 20.01.2015.
