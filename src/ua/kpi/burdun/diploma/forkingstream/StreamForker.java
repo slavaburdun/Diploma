@@ -33,6 +33,7 @@ public class StreamForker<T> {
         ForkingStreamConsumer<T> consumer = build();
         try {
             stream.sequential().forEach(consumer);
+//            stream.forEachOrdered(consumer);
         } finally {
             consumer.finish();
         }
